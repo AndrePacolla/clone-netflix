@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Caprasimo', cursive;
+    color: white;
+}
+.section{
+    background-color: black;
+    padding: 5rem 0;
+    border-top: 10px solid #cccccc3a;
+}
+.container{
+    width: 1400px;
+    max-width: 1550px;
+    margin: 0 auto;
+}
+.header{
+    position: absolute; /*flutua fica sem div*/                      
+    z-index: 1;
+    width: 100%;
+    max-width: 1550px;   
+    display: flex;                                                                                                                     
+    justify-content: space-between;
+    margin: 20px;
+    top: 8px;
+    left: 180px;
+}
+
+ .input-header {
+    position: absolute;
+    left: 1230px;
+    width: 220px;
+    height: 45px;
+}
+ .header a {
+    color: white;
+    text-decoration: none;
+    align-self: flex-start; /*corrige o elemento no eixo vertical, pois ele esta em row padrao*/
+    padding: 10px 18px;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+    height: 785px;
+    background: url('../img/bg.jpg') ;
+    background-position: center;
+}
+.main-child{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top:200px ;
+    z-index: 1; /*sobresair pois o gradient bg cobriu as fontes*/
+    
+}
+.main h1{
+    max-width: 1114px;
+    font-family: 'Caprasimo',cursive;
+    font-weight: 400;
+    font-size: 65px;
+}
+.main span{
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+.main p {
+    font-family: sans-serif;
+    font-size: 27px;
+}
+.form-cta{
+    display: grid;
+    grid-template-columns: 570px 230px;
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.form-cta input{
+    border: 2px solid rgba(255, 255, 255, 0.281);
+    background-color: rgba(0,0,0,0.2);
+    font-size: 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 22px 15px;
+}
+.form-cta input::placeholder{
+    color: white;
+}
+.form-cta button {
+    background-color: rgb(229, 9, 20);
+    color: white;
+    outline: none;
+    font-size: 29px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.form-cta button::after{
+    content: '';
+    display: inline-block;
+    background-image: url(../img/seta.png) ;
+    width: 25px;
+    height: 33px;
+    margin-left: -2px;
+}
+.form-cta button:hover{
+    background-color: #ff000d;
+}
+
+.gradientbg{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    top:0; /*forma de definir tamanho posicionando nos quatros cantos*/
+    left:0; /*forma de definir tamanho posicionando nos quatros cantos*/
+    right:0; /*forma de definir tamanho posicionando nos quatros cantos*/
+    bottom:0; /*forma de definir tamanho posicionando nos quatros cantos*/
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ; /*divide msm tamanho*/
+    align-items: center;
+}
+
+.grid-TXT h1{
+    font-size: 70px;
+    margin-bottom: 22px;
+}
+.grid-TXT p {
+    max-width: 660px;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+.grid-TV{
+ position: relative;
+}
+
+.grid-TV img {
+    position: relative;
+    z-index: 1;
+}
+
+.video-TV{
+    position: absolute;
+    top: 90px;
+    left: 75px;
+}
+
+.download .grid-TXT{
+    order: 1;
+  
+}
+
+.download .grid-TV{
+    order: 0;
+}
+
+.download .video-TV{
+    width: 380px;
+    left: 130px;
+}
+
+.mobile .grid-TXT{
+    order: 1;
+}
+.mobile .grid-TV{
+    order: 0;
+}
+
+.mobile .grid-TV img{
+    width: 800px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-top: 10px solid #cccccc3a;
+    padding: 70px 0 ;
+}
+.footer .form-cta{
+   display: none;
+
+}
+footer p {
+    font-size: 22px;
+}
+footer span{
+    padding: 30px 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #727070;
+}
