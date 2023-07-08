@@ -24,7 +24,7 @@ body{
     position: absolute; /*flutua fica sem div*/                      
     z-index: 1;
     width: 100%;
-    max-width: 1550px;   
+    max-width: 1350px;   
     display: flex;                                                                                                                     
     justify-content: space-between;
     margin: 20px;
@@ -34,7 +34,7 @@ body{
 
  .input-header {
     position: absolute;
-    left: 1230px;
+    left: 1020px;
     width: 220px;
     height: 45px;
 }
