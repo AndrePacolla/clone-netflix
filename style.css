@@ -56,7 +56,7 @@ body{
     justify-content: center ;
     flex-direction: column;
     height: 785px;
-    background: url('../img/bg.jpg') ;
+    background: url('../img/bg.jpg');
     background-position: center;
 }
 .main-child{
@@ -103,6 +103,9 @@ body{
     color: white;
 }
 .form-cta button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(229, 9, 20);
     color: white;
     outline: none;
@@ -114,10 +117,9 @@ body{
 .form-cta button::after{
     content: '';
     display: inline-block;
-    background-image: url(../img/seta.png) ;
-    width: 25px;
-    height: 33px;
-    margin-left: -2px;
+    background-image: url(../img/seta.svg)  ;
+    width: 40px;
+    height: 60px;
 }
 .form-cta button:hover{
     background-color: #ff000d;
@@ -165,7 +167,6 @@ body{
 
 .download .grid-TXT{
     order: 1;
-  
 }
 
 .download .grid-TV{
@@ -188,13 +189,66 @@ body{
     width: 800px;
 }
 
+.doubts{
+    width: 100%;
+}
+.doubts h1{
+    padding-top: 10px;
+    font-size: 65px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.acordion-list{
+    margin: 70px auto;
+    max-width: 100%;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.question,
+.answer{
+    background-color: #303030;
+    padding: 30px; 
+}
+
+.answer{
+    display: none;
+    transition:  1.5s cubic-bezier(0.5, 0, 0.1, 1);
+}
+.answer.active{
+    display: block;
+}
+.question.active::after{
+    transform: rotate(45deg);
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-bottom: 1px;
+}
+.question::after{
+    content: '';
+    display: block;/*só é possivel definir altura e largura assim , por padrao vem como inline*/
+    width: 40px;
+    height: 40px;
+    background: url(../img/x-azul.svg)  no-repeat center;
+    transform: rotate(0deg);
+}
+
+.question .active::after{
+    transform: rotate(0deg);
+}
+
 footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: black;
-    border-top: 10px solid #cccccc3a;
+    border-top: 10px solid #303030;
     padding: 70px 0 ;
 }
 .footer .form-cta{
@@ -209,4 +263,146 @@ footer span{
     font-family: sans-serif;
     font-size: 14px;
     color: #727070;
+}
+
+
+@media(max-width: 800px){
+    .header{
+       left: 10px;
+       max-width: 330px;
+    }
+    .header img{
+        max-width: 90px;
+    }
+    .header a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .main{
+        background: url('../img/bg-mobile.jpg');
+        height: 600px;
+    }
+    .main-child{
+        width: 90vw;
+        margin-top: 50px;
+    }
+    
+    .main h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: 50px;
+        font-size: 32px;
+    }
+    .main span,
+    .main p{
+        font-size: 18px;
+    }
+
+    .gradientbg{
+        background-color: rgba(0, 0,0, 0.5);
+    }
+
+    .form-cta{
+        max-width: 80vw;
+        margin-top: 20px;
+        margin-left: 30px;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .form-cta input{
+        font-size: 16px;
+        padding: 15px;
+        background-color: rgba(0, 0, 0,0.5);
+    }
+    .form-cta button{
+        font-size: 18px;
+        font-family: sans-serif;
+        width: 140px;
+        height: 50px;
+        margin: 0 auto;
+        position: relative;    
+    }
+    .form-cta button::after{
+        position: absolute;
+        left: 88px;
+        top: -10px;
+    }
+    .container{
+        width: 85vw;
+    }
+   
+    .section h1{
+        font-size: 30px;
+    }
+    .section p {
+        font-size: 18px;
+        width: 330px;
+    }
+  
+    .grid{
+        grid-template-columns: 1fr;
+        width: 80vw;
+    }
+    .grid-TXT{
+        max-width: 400px;
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    .grid-TV{
+        width: 80vw;
+    }
+    .grid-TV img{
+        width: 340px;
+    }
+    .grid-TV video{
+        width: 270px;
+        top: 45px;
+        left: 36px;
+    }
+    .download .grid-TXT{
+        order: 0;
+    }
+    .download .grid-TV img{
+        width: 350px;
+    }
+    .download .grid-TV video{
+       width: 220px;
+       top: 30px;
+       left: 70px;
+    }
+    .mobile .grid-TXT{
+        order: 0;
+    }
+    .mobile .grid-TV {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile .grid-TV img{
+        width: 500px;
+    }
+    .question::after{
+        width: 20px;
+        height: 20px;
+    }
+    dt ,dd {
+        font-size: 17px;
+    }
+    footer p {
+        max-width: 300px;
+        font-family: sans-serif;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .form-cta input{
+        width: 300px;
+        background-color: #303030;
+        margin-bottom: 10px;
+    } 
+    footer span{
+        font-size: 13px;
+    }
+    
 }
