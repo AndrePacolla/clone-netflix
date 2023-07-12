@@ -278,6 +278,9 @@ footer span{
         font-size: 14px;
         padding: 8px 12px;
     }
+    .input-header{
+        display: none;
+    }
     
     .main{
         background: url('../img/bg-mobile.jpg');
