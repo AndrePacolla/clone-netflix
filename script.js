@@ -9,7 +9,7 @@ class Accordion {
         item.nextElementSibling.classList.toggle(this.activeItemClass);
 }
 
-     addAccordionEvent(){
+    addAccordionEvent(){
         this.accordionListQuestions.forEach((question) => {
         question.addEventListener('click', () => this.toggleAccordion(question))
     });
@@ -21,7 +21,8 @@ class Accordion {
    }
        return this;
 }
-}
 
-    const accordion = new Accordion('.question');
-    accordion.init();
+} 
+
+const accordion = new Accordion('.question');
+accordion.init();
